@@ -78,8 +78,8 @@ class MyMNIST2CIFAR10(Dataset):
         if max_samples is not None:
             index = random.sample(population=range(self.minimum_data_length),
                                   k=max_samples)
-            self.mnist_data = self.mnist_data[index]
-            self.cifar10_data = self.cifar10_data[index]
+            self.mnist_data.data = self.mnist_data.data[index]
+            self.cifar10_data.data = self.cifar10_data.data[index]
 
 
 class MyCIRFAR102MNIST(MyMNIST2CIFAR10):

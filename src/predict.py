@@ -59,7 +59,6 @@ class Predict:
                     sample_hat, _ = self.model(sample)
                     result.append(sample_hat.cpu().data.numpy())
         result = np.concatenate(result, 0)
-        result = result.transpose(0, 2, 3, 1)
         return result
 
 

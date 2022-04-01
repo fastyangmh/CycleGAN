@@ -22,6 +22,20 @@ gpus: -1
 precision: 32
 max_epochs: 100
 color_space: RGB # (3x8-bit pixels, true color)
+web_interface: True
+examples:
+  [
+    "examples/MNIST/00000_7.png",
+    "examples/MNIST/00001_2.png",
+    "examples/MNIST/00002_1.png",
+    "examples/MNIST/00003_0.png",
+    "examples/MNIST/00004_4.png",
+    "examples/MNIST/00007_9.png",
+    "examples/MNIST/00011_6.png",
+    "examples/MNIST/00061_8.png",
+    "examples/MNIST/00433_5.png",
+    "examples/MNIST/00449_3.png",
+  ]
 
 #transforms configuration
 transforms_config:

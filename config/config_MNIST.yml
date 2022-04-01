@@ -8,12 +8,19 @@ batch_size: 32
 num_workers: 0
 device: cuda
 lr: 1e-3
-in_chans: 1
+in_chans: 3
 input_height: 32
 latent_dim: 256
 generator_feature_dim: 64
 discriminator_feature_dim: 64
 checkpoint_path: null
+seed: 0
+early_stopping: True
+patience: 3
+default_root_dir: save/
+gpus: -1
+precision: 32
+max_epochs: 100
 
 #transforms configuration
 transforms_config:
@@ -21,7 +28,6 @@ transforms_config:
     Resize:
       - 32
       - 32
-    RandomRotation: 90
     ToTensor:
 
   val:
